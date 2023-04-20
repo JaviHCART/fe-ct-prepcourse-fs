@@ -23,12 +23,13 @@ function incrementarPorUno(array) {
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
       var guardar = [];
-      for (var i = 0; i < array.length; i++){
-         guardar.push(array[i] + 1);
-      }
-         return guardar;
+      var suma = 0;
+      for (var i = 0; i < array.length; i++) {
+         suma = array[i] + 1;
+         guardar.push(suma);
 }
-
+      return guardar;
+}
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
@@ -79,25 +80,27 @@ function promedioResultadosTest(resultadosTest) {
    // Tu código:
       var suma = 0;
       var prom = 0;
-         for (var i = 0; i < resultadosTest.length; i++) {
-             suma = suma + resultadosTest[i];    
+      for (var i = 0; i < resultadosTest.length; i++){
+         suma = (suma + resultadosTest[i]);   
 }
-      prom = suma / resultadosTest.length;
-      return prom;
+         prom = suma / resultadosTest.length
+         return prom;
 }
+
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-      var guardar = 0;
-         for(var i = 0; i < arrayOfNums.length; i++)     {             
-            if (arrayOfNums[i] > guardar)              {
-                  guardar = arrayOfNums[i];       
-}
-}
-                  return guardar;
-}
+            var guardar = 0;
+         for (var i = 0; i < arrayOfNums.length; i++){
+            if (arrayOfNums[i] > guardar){
+               guardar = arrayOfNums[i];
+            }
+         }
+               return guardar;
+         }
+      
 
 
 function multiplicarArgumentos() {
@@ -105,31 +108,30 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-         var guardar = 1
-         if (arguments.length === 0)               {
+         var guardar = 1;
+            if (arguments.length === 0)         {
                return 0;
-}         else if (arguments.length === 1)         {
-               return arguments [0] 
-}        else                                      {
-         for (var i = 0; i < arguments.length; i++){ 
-               guardar = guardar * arguments[i];  
-}
-}
-               return guardar;
-}
-
+      }     else if  (arguments.length === 1)   {
+                  return arguments[0];
+               }       for (var i = 0; i < arguments.length; i++){
+            guardar = (guardar * arguments[i])
+         }  
+            return guardar;   
+         }
+         
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
-      var guardar = 0;
-         for (var i = 0; i < array.length; i++){
-         if (array [i] > 18){
-               guardar = guardar + 1
+   var guardar = 0
+      for (var i = 0; i < array.length; i++){
+         if (array[i] > 18)                 {
+            guardar = guardar + 1;
+         }
+      }
+      return guardar;
 }
-}
-         return guardar;
-}
+
 
 function diaDeLaSemana(numeroDeDia) {
    // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
@@ -175,17 +177,17 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-         var guardar = [];
-      for (var i = 0; i < array.length; i++)                                          {
-         if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){ 
+       var guardar = [];
+      for (var i = 0; i < array.length; i++){
+         if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
                guardar.push(array[i]);
-         } 
-      }          
-            if (guardar.length === 3) {
+            }   
+         }
+                   if (guardar.length === 3){
                return guardar;
-}           else                                                                      {
-            return ("No se encontraron los meses pedidos");
-}
+            }           else {
+               return "No se encontraron los meses pedidos"
+}     
 }
 
 function tablaDelSeis() {
@@ -203,14 +205,14 @@ function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-         var guardar = [];
-            for (var i = 0; i < array.length; i++){
-               if(array[i] > 100){
-                  guardar.push(array[i])
-}
-      }
-      return guardar;
-   }
+            var guardar = [];
+         for (var i = 0; i < array.length; i++){
+            if (array[i] > 100){
+               guardar.push(array[i])
+            }
+         }
+            return guardar;
+         }
 
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
@@ -223,20 +225,20 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-      var array = [];
-      suma = num;
-         for (var i = 0; i < 10; i++){
+         var guardar = [];
+         suma = num
+            for (var i = 0; i < 10; i++) {
                suma = suma + 2;
-            if (suma === i)            {
+            if (suma === i)             {
                break;
-}           else                                   {
-              array.push(suma)
-}
-}             
-         if (array.length < 10)                    {
+          } else                           {
+               guardar.push(suma)
+               }    
+         }  if (guardar.length < 10)       {
                return ("Se interrumpió la ejecución")
-}        else if (array.length === 10)             {
-               return array;
+                        }            
+            else                           {
+               return guardar;
 }
 }
 
@@ -254,8 +256,8 @@ function continueStatement(num) {
           if (i === 5){
             continue;
          }      else {
-            suma = suma + 2
-            array.push(suma)
+            suma = suma + 2;
+            array.push(suma);
          }
       }
       return array;
